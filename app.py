@@ -34,7 +34,6 @@ if prompt := st.chat_input("Ask anything..."):
     with st.chat_message("assistant"):
         response_placeholder = st.empty()
         try:
-            # Send message to Gemini and get response
             response = st.session_state.chat_session.send_message(prompt)
             response_placeholder.markdown(response.text)
         except Exception as e:
