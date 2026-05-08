@@ -11,8 +11,8 @@ genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel('gemini-2.5-flash')
  
-st.set_page_config(page_title="Gemini AI Chatbot", page_icon="♊")
-st.title("Gemini AI Assistant ")
+st.set_page_config(page_title="AI Chatbot", page_icon="♊")
+st.title("AI Assistant ")
 
 
 if "chat_session" not in st.session_state:
@@ -25,7 +25,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
  
 
-if prompt := st.chat_input("Ask Gemini anything..."):
+if prompt := st.chat_input("Ask anything..."):
     
     with st.chat_message("user"):
         st.markdown(prompt)
