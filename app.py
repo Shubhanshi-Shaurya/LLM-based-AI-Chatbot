@@ -16,7 +16,6 @@ st.title("Gemini AI Assistant ")
 
 
 if "chat_session" not in st.session_state:
-    # Start a Gemini chat session to handle multi-turn conversations automatically
     st.session_state.chat_session = model.start_chat(history=[])
 
 
