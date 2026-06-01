@@ -11,12 +11,11 @@ genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel('gemini-2.5-flash')
  
-st.set_page_config(page_title="Gemini AI Chatbot", page_icon="♊")
-st.title("Gemini AI Assistant ")
+st.set_page_config(page_title="AI Chatbot", page_icon="♊")
+st.title("AI Assistant ")
 
 
 if "chat_session" not in st.session_state:
-    # Start a Gemini chat session to handle multi-turn conversations automatically
     st.session_state.chat_session = model.start_chat(history=[])
 
 
@@ -26,7 +25,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
  
 
-if prompt := st.chat_input("Ask Gemini anything..."):
+if prompt := st.chat_input("Ask anything..."):
     
     with st.chat_message("user"):
         st.markdown(prompt)
@@ -35,7 +34,6 @@ if prompt := st.chat_input("Ask Gemini anything..."):
     with st.chat_message("assistant"):
         response_placeholder = st.empty()
         try:
-            # Send message to Gemini and get response
             response = st.session_state.chat_session.send_message(prompt)
             response_placeholder.markdown(response.text)
         except Exception as e:
