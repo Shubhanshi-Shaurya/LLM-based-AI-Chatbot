@@ -37,7 +37,7 @@ chatbot/
 ---
 
 ##  Future Enhancements 
-**Context-Based Chatbot:** Remember Conversation .
-**Domain Chatbot:** Specialized in specific Industry , Example-HR Chatbot/Finance Chatbot etc.
-**PDF Chatbot:** Upload PDF and ask questions .
+- **Context-Based Chatbot:** Remember Conversation .
+- **Domain Chatbot:** Specialized in specific Industry , Example-HR Chatbot/Finance Chatbot etc.
+- **PDF Chatbot:** Upload PDF and ask questions .
 
