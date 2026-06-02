@@ -5,9 +5,9 @@ import os
 
 
 load_dotenv()
-api_key = st.secrets["apikey"]
+api_key = os.getenv("apikey")
 genai.configure(api_key=api_key)
-
+ 
 
 model = genai.GenerativeModel('gemini-2.5-flash')
  
