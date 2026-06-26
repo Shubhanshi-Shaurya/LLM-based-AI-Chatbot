@@ -24,8 +24,7 @@ A real-time, conversational AI chatbot built with **Python**, **Google Gemini 2.
 ##  Project Structure
 ```text
 chatbot/
-├── .streamlit/
-│   └── secrets.toml      
+├── .env      
 ├── venv/                 
 ├── app.py               
 ├── requirements.txt  
