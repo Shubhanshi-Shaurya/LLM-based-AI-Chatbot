@@ -1,15 +1,17 @@
 import streamlit as st
-import google.generativeai as genai
+# import google.generativeai as genai
+from langchain_google_genai import GoogleGenerativeAI
 from dotenv import load_dotenv
 import os
 
 
 load_dotenv()
-api_key = os.getenv("apikey")
-genai.configure(api_key=api_key)
+# api_key = os.getenv("apikey")
+# genai.configure(api_key=api_key)
  
 
-model = genai.GenerativeModel('gemini-2.5-flash')
+# model = genai.GenerativeModel('gemini-2.5-flash')
+model=GoogleGenerativeAI(model="gemini-2.5-flash")
  
 st.set_page_config(page_title="AI Chatbot", page_icon="♊")
 st.title("AI Assistant ")
